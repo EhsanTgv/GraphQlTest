@@ -42,6 +42,13 @@ dependencies {
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation 'com.apollographql.apollo:apollo-runtime:2.2.0'
-    implementation 'com.apollographql.apollo:apollo-android-support:2.2.0'
+    implementation("com.apollographql.apollo:apollo-runtime:2.2.0")
+    implementation("com.apollographql.apollo:apollo-coroutines-support:2.2.0")
+    implementation('androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0')
+    implementation('androidx.lifecycle:lifecycle-runtime-ktx:2.2.0')
+    implementation('androidx.lifecycle:lifecycle-livedata-ktx:2.2.0')
+}
+
+apollo {
+    generateKotlinModels.set(true)
 }
