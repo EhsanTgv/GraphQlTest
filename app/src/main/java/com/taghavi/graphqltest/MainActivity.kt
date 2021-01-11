@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         scope.launch {
             val response = try {
-                apolloClient.query(LaunchDetails(id = "83")).toDeferred().await()
+                apolloClient.query(LaunchDetailsQuery(id = "83")).toDeferred().await()
             } catch (e: ApolloException) {
                 // handle protocol errors
                 return@launch
